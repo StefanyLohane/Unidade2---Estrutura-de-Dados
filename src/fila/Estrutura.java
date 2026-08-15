@@ -2,7 +2,7 @@ package fila;
 
 import java.util.LinkedList;
 
-public class EstruturaFila {
+public class Estrutura {
     LinkedList<String> fila = new LinkedList<>();
 
     public void inserir(String e){

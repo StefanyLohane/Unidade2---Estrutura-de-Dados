@@ -1,8 +1,8 @@
 package fila;
 
-public class FilaClasse {
+public class Fila {
     public static void main(String[] args) {
-        EstruturaFila fila = new EstruturaFila();
+        Estrutura fila = new Estrutura();
 
         fila.inserir("Stefany");
         fila.inserir("Johana");

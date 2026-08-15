@@ -2,7 +2,7 @@ package fila;
 
 import java.util.Stack;
 
-public class PilhaClasse {
+public class Pilha {
     Stack<String> pilha = new Stack<>();
 
     public void inserir(String e){

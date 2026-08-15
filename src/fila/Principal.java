@@ -1,8 +1,8 @@
 package fila;
 
-public class PrincipalPilha {
+public class Principal {
     public static void main(String[] args) {
-        PilhaClasse p = new PilhaClasse();
+        Pilha p = new Pilha();
 
         p.inserir("Stefany");
         p.inserir("Johana");
