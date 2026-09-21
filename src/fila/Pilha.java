@@ -12,7 +12,7 @@ public class Pilha {
     
     public String remover(){
         if (verificar()) {
-            System.out.println("Alista está vazia! ");
+            System.out.println("A lista está vazia! ");
         }
         else{
             return pilha.pop();

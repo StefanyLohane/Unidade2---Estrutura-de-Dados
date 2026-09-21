@@ -1,12 +1,16 @@
-package fila;
+package revisao.impressora;
 
 import java.util.LinkedList;
+import java.util.Stack;
 
-public class Estrutura {
+public class Fila {
+    Stack<String> pilha = new Stack<>();
     LinkedList<String> fila = new LinkedList<>();
+    int quantidade = 0;
 
     public void inserir(String e){
         fila.addLast(e);
+        quantidade ++;
 
     }
     
@@ -17,6 +21,8 @@ public class Estrutura {
         else{
             return fila.removeFirst();
         }
+
+        quantidade--;
 
         return null;
     }
@@ -38,4 +44,18 @@ public class Estrutura {
         }
         
     }
-}
+
+    public void inverter(){
+        for(int i = 0; i <= quantidade; i++){
+            pilha.push(fila.element());
+        }
+
+        for(int j = 0; j <= quantidade; j++){
+            fila.addLast(pilha. );
+
+        }
+                
+    
+    }
+
+    }
