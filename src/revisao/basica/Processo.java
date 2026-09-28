@@ -1,4 +1,4 @@
-package revisao.impressora;
+package revisao.basica;
 
 public class Processo {
     private String pid;
@@ -22,5 +22,10 @@ public class Processo {
     }
     public void setConteudo(String conteudo) {
         this.conteudo = conteudo;
+    }
+
+     @Override
+    public String toString() {
+        return "PID: " + pid + " | Conteúdo: " + conteudo;
     }
 }
