@@ -52,32 +52,37 @@ public class FilaPPilha {
     // Inverte a fila usando uma pilha auxiliar
     public void inverter() {
 
-        // Retira os elementos da fila e coloca na pilha
         while (!fila.isEmpty()) {
             pilha.push(fila.removeFirst());
         }
 
-        // Retira os elementos da pilha e coloca novamente na fila
         while (!pilha.isEmpty()) {
             fila.addLast(pilha.pop());
         }
+
         System.out.println("Invertido com sucesso!");
     }
 
-    public boolean verificarPalindromo(){
-        FilaPPilha filanova = new FilaPPilha();
-        FilaPPilha filainvertida = new FilaPPilha();
+    // Verifica se uma palavra é um palíndromo
+    public boolean verificarPalindromo(String texto) {
 
-        filanova.inverter();
-        
-        filanova = filainvertida;
+        Stack<String> pilhaPalindromo = new Stack<>();
 
-        System.out.println("Verificando palíndromo...");
-        if (condition) {
-            return true;
+        // Coloca cada caractere na pilha
+        for (int i = 0; i < texto.length(); i++) {
+            pilhaPalindromo.push(String.valueOf(texto.charAt(i)));
         }
-        else{
-            return false;
+
+        // Retira da pilha e compara com a palavra original
+        for (int i = 0; i < texto.length(); i++) {
+
+            String caractere = pilhaPalindromo.pop();
+
+            if (caractere.charAt(0) != texto.charAt(i)) {
+                return false;
+            }
         }
+
+        return true;
     }
 }
